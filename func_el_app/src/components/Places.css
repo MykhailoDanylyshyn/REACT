@@ -1,0 +1,75 @@
+.places {
+    background-color: #eaf4f8;
+    padding: 35px;
+    border-radius: 16px;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.06);
+}
+
+.places h2 {
+    color: #123456;
+    font-size: 30px;
+    text-align: center;
+    margin: 0 0 30px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #c5dfed;
+}
+
+.place {
+    background-color: white;
+    padding: 25px;
+    margin: 25px 0;
+    border-radius: 14px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.place:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.place h3 {
+    color: #1976a5;
+    font-size: 23px;
+    margin-top: 0;
+    margin-bottom: 18px;
+}
+
+.place img {
+    width: 100%;
+    max-width: 650px;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 10px;
+    display: block;
+    margin: 15px auto;
+}
+
+.place p {
+    color: #526579;
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 0;
+}
+
+@media (max-width: 600px) {
+    .places {
+        padding: 20px;
+    }
+
+    .places h2 {
+        font-size: 25px;
+    }
+
+    .place {
+        padding: 18px;
+    }
+
+    .place h3 {
+        font-size: 20px;
+    }
+
+    .place img {
+        height: 220px;
+    }
+}
