@@ -1,0 +1,35 @@
+.header {
+    background: linear-gradient(135deg, #7b3f00, #b5651d);
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+    border-radius: 18px;
+    margin-bottom: 25px;
+    box-shadow: 0 8px 20px rgba(80, 45, 20, 0.25);
+}
+
+.header h1 {
+    font-size: 44px;
+    margin-bottom: 12px;
+    letter-spacing: 1px;
+}
+
+.header p {
+    font-size: 19px;
+    margin: 0;
+    color: #fff4e6;
+}
+
+@media (max-width: 600px) {
+    .header {
+        padding: 35px 15px;
+    }
+
+    .header h1 {
+        font-size: 32px;
+    }
+
+    .header p {
+        font-size: 16px;
+    }
+}
