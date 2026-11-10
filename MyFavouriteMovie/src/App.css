@@ -1,0 +1,27 @@
+.App {
+  min-height: 100vh;
+  padding: 65px 20px;
+  background:
+    radial-gradient(circle at 10% 10%, #ffe0ef 0, transparent 30%),
+    radial-gradient(circle at 90% 80%, #dcd6ff 0, transparent 30%),
+    #fff8f0;
+  color: #29243b;
+  text-align: center;
+}
+
+.App>h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 48px;
+  font-weight: 700;
+  color: #7446c8;
+  margin-bottom: 45px;
+  letter-spacing: 1px;
+}
+
+.App>.movies {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 30px;
+}
