@@ -1,0 +1,155 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: linear-gradient(135deg, #e8f5f5, #f4f7fb);
+  color: #263238;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+.card {
+  width: 100%;
+  max-width: 650px;
+  padding: 35px;
+  background: #ffffff;
+  border-radius: 18px;
+  box-shadow: 0 10px 40px rgba(35, 75, 85, 0.10);
+}
+
+/* Заголовок */
+
+h1, h2 {
+  color: #263f46;
+}
+
+.separator {
+  height: 1px;
+  background: #e6eeee;
+  margin: 25px 0;
+}
+
+/* Поля форми */
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.field > label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #40565d;
+}
+
+.field input[type="text"],
+.field input[type="password"],
+.field select {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #d5e0e2;
+  border-radius: 9px;
+  background: #fbfdfd;
+  color: #263238;
+  font-size: 15px;
+  outline: none;
+  transition: 0.2s;
+}
+
+.field input:focus,
+.field select:focus {
+  border-color: #39aeb0;
+  box-shadow: 0 0 0 3px rgba(57, 174, 176, 0.12);
+  background: #ffffff;
+}
+
+/* Валідація */
+
+.field input.valid,
+.field select.valid {
+  border-color: #35a879;
+}
+
+.field input.invalid,
+.field select.invalid {
+  border-color: #e45d65;
+}
+
+.error {
+  color: #dc4c56;
+  font-size: 13px;
+  margin-top: 2px;
+}
+
+/* Чекбокси */
+
+.field input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  accent-color: #32a6a8;
+  cursor: pointer;
+  margin-right: 8px;
+}
+
+.field div label {
+  display: inline-flex;
+  align-items: center;
+  margin: 5px 15px 5px 0;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* Кнопка */
+
+button {
+  width: 100%;
+  padding: 13px;
+  border: none;
+  border-radius: 9px;
+  background: #32a6a8;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+button:hover {
+  background: #258d90;
+  transform: translateY(-1px);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+/* Адаптивність */
+
+@media (max-width: 600px) {
+  .container {
+    padding: 15px;
+  }
+
+  .card {
+    padding: 22px 18px;
+  }
+}

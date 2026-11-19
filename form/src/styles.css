@@ -1,0 +1,132 @@
+:root {
+    --bg: #f5f7fb;
+    --card: #ffffff;
+    --accent: #4b9ce2;
+    --accent-hover: #3583c4;
+    --danger: #e63946;
+    --success: #3cb371;
+    --text: #2b2b2b;
+    --border: #e2e8f0;
+}
+
+body {
+    font-family: 'Inter', Roboto, "Segoe UI", Arial, sans-serif;
+    background: var(--bg);
+    margin: 0;
+    padding: 40px 20px;
+    color: var(--text);
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.card {
+    background: var(--card);
+    padding: 32px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(16, 24, 40, 0.08);
+}
+
+h1 {
+    margin: 0 0 8px 0;
+    font-size: 1.6rem;
+    color: #111;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 16px;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 6px;
+    font-size: 14px;
+}
+
+input[type='text'],
+input[type='number'] {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px 14px;
+    border: 2px solid var(--border);
+    border-radius: 8px;
+    font-size: 15px;
+    outline: none;
+    background-color: #fafafa;
+    transition: all 0.25s ease;
+}
+
+input[type='text']:focus,
+input[type='number']:focus {
+    border-color: var(--accent);
+    background-color: #fff;
+    box-shadow: 0 0 0 3px rgba(75, 156, 226, 0.15);
+}
+
+input.valid {
+    border-color: var(--success);
+}
+
+input.invalid {
+    border-color: var(--danger);
+}
+
+.error {
+    color: var(--danger);
+    font-size: 13px;
+    margin-top: 6px;
+    font-weight: 500;
+}
+
+button {
+    background: var(--accent);
+    color: white;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 16px;
+    width: 100%;
+    transition: all 0.25s ease;
+}
+
+button:hover {
+    background: var(--accent-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(75, 156, 226, 0.3);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 8px;
+}
+
+.small {
+    font-size: 14px;
+    color: #666;
+}
+
+.separator {
+    height: 1px;
+    background: #eef2f7;
+    margin: 20px 0;
+    border-radius: 2px;
+}
