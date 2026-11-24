@@ -1,0 +1,396 @@
+.app {
+  width: min(100% - 40px, 1180px);
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 30px 0 48px;
+}
+
+.app-header {
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.app-header h1 {
+  margin: 0;
+  color: #5a382b;
+  font-size: clamp(28px, 4vw, 38px);
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.phone-book-container {
+  min-height: 560px;
+  padding: clamp(18px, 3vw, 32px);
+  background: #f4ede4;
+  border: 1px solid #d9c8b8;
+  border-radius: 18px;
+  box-shadow: 0 18px 45px rgba(25, 13, 8, 0.24);
+}
+
+/* Пошук і керування сховищем */
+
+.toolbar {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 24px;
+}
+
+.toolbar .search-field {
+  flex: 1;
+  min-width: 0;
+  margin: 0;
+}
+
+.toolbar .search-field label {
+  display: none;
+}
+
+.toolbar .search-field input {
+  width: 100%;
+  height: 44px;
+}
+
+.storage-controls {
+  display: flex;
+  gap: 9px;
+}
+
+.button {
+  min-height: 40px;
+  padding: 10px 16px;
+  border: 0;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.button:hover {
+  transform: translateY(-1px);
+}
+
+.button-save,
+.button-primary {
+  color: #fffaf4;
+  background: #5a382b;
+}
+
+.button-save:hover,
+.button-primary:hover {
+  background: #704735;
+}
+
+.button-load,
+.button-secondary {
+  color: #4a3025;
+  background: #dfd0c1;
+}
+
+.button-load:hover,
+.button-secondary:hover {
+  background: #d2beaa;
+}
+
+/* Основна частина */
+
+.main-content {
+  display: grid;
+  grid-template-columns: minmax(280px, 0.78fr) minmax(0, 1.5fr);
+  gap: 26px;
+  align-items: start;
+}
+
+.form-section {
+  min-width: 0;
+  padding: 24px;
+  background: #e9ddd0;
+  border: 1px solid #d8c5b3;
+  border-radius: 14px;
+  box-shadow: 0 5px 16px rgba(74, 48, 37, 0.08);
+}
+
+.contact-form>h2 {
+  display: block;
+  margin: 0 0 22px;
+  color: #4a3025;
+  font-size: 20px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  margin-bottom: 17px;
+}
+
+.field label {
+  color: #563b2e;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.field input {
+  width: 100%;
+  min-width: 0;
+  min-height: 42px;
+  padding: 10px 12px;
+  color: #39271f;
+  background: #fffaf5;
+  border: 1px solid #cdb9a7;
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.field input::placeholder {
+  color: #a18e80;
+}
+
+.field input:focus {
+  border-color: #80553f;
+  box-shadow: 0 0 0 3px rgba(128, 85, 63, 0.13);
+}
+
+.field-error {
+  margin: 0;
+  color: #a13f3f;
+  font-size: 12px;
+}
+
+.field-hint {
+  margin: 0;
+  color: #806d60;
+  font-size: 11px;
+}
+
+/* Телефон */
+
+.phone-input {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.phone-plus {
+  color: #563b2e;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.phone-input .country-code-input {
+  width: 58px;
+  flex: 0 0 58px;
+  padding-right: 6px;
+  padding-left: 6px;
+  text-align: center;
+}
+
+.phone-input .phone-number-input {
+  flex: 1;
+  min-width: 0;
+}
+
+/* Кнопки форми */
+
+.form-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+  margin-top: 22px;
+}
+
+.form-buttons .button {
+  flex: 1;
+}
+
+/* Контакти */
+
+.contacts-section {
+  min-width: 0;
+}
+
+.contacts-section h2 {
+  margin: 3px 0 18px;
+  color: #4a3025;
+  font-size: 20px;
+}
+
+.contacts-list {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+}
+
+.contact-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 18px;
+  padding: 18px 20px;
+  background: #fffaf5;
+  border: 1px solid #e2d4c7;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(74, 48, 37, 0.07);
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.contact-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(74, 48, 37, 0.11);
+}
+
+.contact-info {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.contact-info h3 {
+  margin: 0 0 9px;
+  color: #432c22;
+  font-size: 16px;
+}
+
+.contact-info p {
+  margin: 5px 0;
+  color: #806d60;
+  font-size: 13px;
+}
+
+.contact-actions {
+  display: flex;
+  flex-shrink: 0;
+  gap: 8px;
+}
+
+.button-edit {
+  color: #fffaf4;
+  background: #806047;
+}
+
+.button-edit:hover {
+  background: #694b37;
+}
+
+.button-delete {
+  color: #fffaf4;
+  background: #8d4540;
+}
+
+.button-delete:hover {
+  background: #713631;
+}
+
+.empty-message {
+  padding: 34px 20px;
+  color: #806d60;
+  text-align: center;
+  background: #fffaf5;
+  border: 1px dashed #cdb9a7;
+  border-radius: 12px;
+}
+
+.storage-message {
+  margin: -10px 0 18px;
+  color: #55745c;
+  font-size: 13px;
+}
+
+/* Модальне вікно */
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background: rgba(35, 22, 16, 0.62);
+  backdrop-filter: blur(3px);
+}
+
+.modal {
+  width: min(100%, 440px);
+  padding: 28px;
+  background: #f4ede4;
+  border: 1px solid #d9c8b8;
+  border-radius: 16px;
+  box-shadow: 0 18px 50px rgba(20, 12, 8, 0.3);
+}
+
+.modal h2 {
+  margin: 0 0 14px;
+  color: #4a3025;
+}
+
+.modal p {
+  color: #725b4d;
+  line-height: 1.55;
+}
+
+.modal-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 22px;
+}
+
+/* Адаптивність */
+
+@media (max-width: 800px) {
+  .main-content {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .form-section {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 560px) {
+  .app {
+    width: min(100% - 24px, 100%);
+    padding: 20px 0 30px;
+  }
+
+  .phone-book-container {
+    padding: 15px;
+    border-radius: 14px;
+  }
+
+  .toolbar {
+    align-items: stretch;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .storage-controls {
+    width: 100%;
+  }
+
+  .storage-controls .button {
+    flex: 1;
+  }
+
+  .contact-card {
+    align-items: stretch;
+    flex-direction: column;
+    gap: 14px;
+    padding: 16px;
+  }
+
+  .contact-actions {
+    width: 100%;
+  }
+
+  .contact-actions .button {
+    flex: 1;
+  }
+
+  .modal {
+    padding: 22px;
+  }
+}
